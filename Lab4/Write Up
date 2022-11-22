@@ -1,0 +1,41 @@
+Lab 4 Write Up
+
+*******Cache size: 300********
+7052 Page Faults
+70.52% Fault Rate
+
+*******Cache size: 400********
+6104 Page Faults
+61.04% Fault Rate
+
+*******Cache size: 500********
+5131 Page Faults
+51.31% Fault Rate
+
+*******Cache size: 600********
+4208 Page Faults
+42.08% Fault Rate
+
+*******Cache size: 700********
+3302 Page Faults
+33.02% Fault Rate
+
+*******Cache size: 800********
+2497 Page Faults
+24.97% Fault Rate
+
+Here is the sample size of my program.  In my program, I implemented the FIFO page
+replacement by going through and checking for one of 3 situations:
+1) Is the queue_length < cache_size and is queue_find() NULL
+2) Is queue_find() not NULL
+3) Has the queue_length() reached the same size as the cache_size
+
+Using this, I was able to implement my FIFO replacement algorithm. However, there
+was one issue that I was running into and it was in regards to my page reads. It
+seems as though my page reads were well over the length of the actual text document
+size. Which begs the question, should this be a static variable? Should our page reads ever
+reach sizes that are greater than the length of the file that we are reading from?
+On a different note, as we increase our sample size (referencing cache size) we
+can see a steady decrease in the fault rate. In fact, it has a very linear slope.
+Which means that we slowly approach a 0% fault rate the closer we get to the length
+of the file.

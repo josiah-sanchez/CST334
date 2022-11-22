@@ -1,0 +1,8 @@
+Lab 3 Notes
+
+No questions to be answered this lab...
+
+Did have a little bit of trouble trying to understand the concept
+of step 3, but I managed to come around on it. Step 2 was interesting, because
+it used stdout to display the name of the executable file. Step 1
+displayed the different files found in my system.
